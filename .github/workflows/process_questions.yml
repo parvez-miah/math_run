@@ -1,0 +1,118 @@
+name: Process Math Questions
+
+on:
+  workflow_dispatch:
+    inputs:
+      folders_to_process:
+        description: 'Comma-separated folder names to process (leave empty for all)'
+        required: false
+        default: ''
+      batch_size:
+        description: 'Number of images to process before break'
+        required: false
+        default: '20'
+      break_minutes:
+        description: 'Break duration in minutes'
+        required: false
+        default: '20'
+
+jobs:
+  process-questions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720  # 12 hours max
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      
+      - name: Verify folder_contexts.json
+        run: |
+          if [ ! -f "folder_contexts.json" ]; then
+            echo "❌ folder_contexts.json not found!"
+            exit 1
+          fi
+          echo "✅ folder_contexts.json found"
+          cat folder_contexts.json
+      
+      - name: Verify Images Folders
+        run: |
+          if [ ! -d "Images" ]; then
+            echo "❌ Images folder not found!"
+            exit 1
+          fi
+          echo "✅ Images folder structure:"
+          ls -R Images/
+      
+      - name: Process Questions
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+        run: |
+          echo "🚀 Starting question processing..."
+          echo "📊 Configuration:"
+          echo "   - Batch Size: ${{ github.event.inputs.batch_size }}"
+          echo "   - Break Duration: ${{ github.event.inputs.break_minutes }} minutes"
+          
+          python process_questions.py
+      
+      - name: Prepare Artifacts
+        if: success()
+        run: |
+          echo "📦 Preparing artifacts..."
+          cd output_data
+          for folder in */; do
+            if [ -d "$folder" ]; then
+              folder_name="${folder%/}"
+              echo "Zipping: $folder_name"
+              zip -r "${folder_name}.zip" "$folder_name"
+            fi
+          done
+          ls -lh *.zip
+      
+      - name: Upload Output Artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-questions-${{ github.run_number }}
+          path: output_data/*.zip
+          retention-days: 30
+      
+      - name: Generate Summary Report
+        if: success()
+        run: |
+          echo "# 📊 Processing Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ✅ Successfully Processed Folders" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          for folder in output_data/*/; do
+            if [ -d "$folder" ] && [ -f "${folder}full.json" ]; then
+              folder_name=$(basename "$folder")
+              total_questions=$(cat "${folder}full.json" | grep -o '"id":' | wc -l)
+              file_size=$(du -h "${folder}full.json" | cut -f1)
+              
+              echo "### 📁 $folder_name" >> $GITHUB_STEP_SUMMARY
+              echo "- **Total Questions:** $total_questions" >> $GITHUB_STEP_SUMMARY
+              echo "- **File Size:** $file_size" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+          
+          echo "## 📥 Download Artifacts" >> $GITHUB_STEP_SUMMARY
+          echo "Artifacts are available in the **Actions** tab under this workflow run." >> $GITHUB_STEP_SUMMARY
+      
+      - name: Cleanup on Failure
+        if: failure()
+        run: |
+          echo "❌ Workflow failed. Check logs for details."
+          echo "Current state saved in output_data folder."
+          ls -R output_data/ || echo "No output data found"

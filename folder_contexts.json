@@ -29,21 +29,6 @@
         "question_for_en": "Medical University Admission",
         "question_for_bn": "মেডিকেল বিশ্ববিদ্যালয় ভর্তি"
       }
-    },
-    {
-      "name": "Third",
-      "context": {
-        "grades": [11, 12],
-        "exam_types": ["Engineering Exam", "HSC", "Versity"],
-        "subject": "Higher Mathematics 1st Paper",
-        "question_type": "MCQ",
-        "chapter_en": "Matrix and Determinant",
-        "chapter_bn": "ম্যাট্রিক্স ও নির্ণায়ক",
-        "chapter_number_en": "03",
-        "chapter_number_bn": "০৩",
-        "question_for_en": "Engineering University Admission",
-        "question_for_bn": "প্রকৌশল বিশ্ববিদ্যালয় ভর্তি"
-      }
     }
   ]
 }

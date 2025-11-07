@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "First",
+      "name": "chapter 04 circle math 1st paper",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity", "Engineering Exam", "GST Exam"],
@@ -16,7 +16,7 @@
       }
     },
     {
-      "name": "Second",
+      "name": "chapter 09 differentiation",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],

@@ -1,11 +1,11 @@
 {
   "folders": [
     {
-      "name": "chapter 04 circle math 1st paper",
+      "name": "chapter 09 differentiation",
       "context": {
         "grades": [11, 12],
-        "exam_types": ["Medical Admission", "HSC", "Versity", "Engineering Exam", "GST Exam"],
-        "subject": "Higher Mathematics 1st Paper",
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
         "chapter_en": "Differentiation",
         "chapter_bn": "অন্তরীকরণ",
@@ -16,7 +16,7 @@
       }
     },
     {
-      "name": "chapter 09 differentiation",
+      "name": "chapter 10 Integration",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
@@ -26,8 +26,8 @@
         "chapter_bn": "সমাকলন",
         "chapter_number_en": "10",
         "chapter_number_bn": "১০",
-        "question_for_en": "Medical University Admission",
-        "question_for_bn": "মেডিকেল বিশ্ববিদ্যালয় ভর্তি"
+        "question_for_en": "Agricultural University Admission",
+        "question_for_bn": "কৃষি বিশ্ববিদ্যালয় ভর্তি"
       }
     }
   ]

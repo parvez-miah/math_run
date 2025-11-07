@@ -24,6 +24,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          lfs: true # Added in case images are stored in LFS
+      
+      - name: Display Workflow Inputs
+        run: |
+          echo "📂 Workflow Inputs:"
+          echo "   - Folders to process: '${{ github.event.inputs.folders_to_process }}'"
+          echo "   - Batch Size: ${{ github.event.inputs.batch_size }}"
+          echo "   - Break Duration: ${{ github.event.inputs.break_minutes }} minutes"
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -32,26 +41,39 @@ jobs:
       
       - name: Install Dependencies
         run: |
+          echo "🐍 Installing dependencies..."
           python -m pip install --upgrade pip
           pip install requests
+          echo "✅ Dependencies installed:"
+          pip list
       
       - name: Verify folder_contexts.json
         run: |
+          echo "🔍 Verifying 'folder_contexts.json'..."
           if [ ! -f "folder_contexts.json" ]; then
             echo "❌ folder_contexts.json not found!"
             exit 1
           fi
           echo "✅ folder_contexts.json found"
+          ls -lh folder_contexts.json
+          echo "--- Content Start ---"
           cat folder_contexts.json
+          echo "--- Content End ---"
       
       - name: Verify Images Folders
         run: |
+          echo "🖼️ Verifying 'Images' folder..."
           if [ ! -d "Images" ]; then
             echo "❌ Images folder not found!"
             exit 1
           fi
-          echo "✅ Images folder structure:"
-          ls -R Images/
+          echo "✅ Images folder found. Listing contents:"
+          # List subdirectories
+          ls -l Images/
+          # List contents of subdirectories (up to 50 items for brevity)
+          echo "--- Subfolder Contents (sample) ---"
+          ls -R Images/ | head -n 50
+          echo "-----------------------------------"
       
       - name: Process Questions
         env:
@@ -62,20 +84,30 @@ jobs:
           echo "   - Batch Size: ${{ github.event.inputs.batch_size }}"
           echo "   - Break Duration: ${{ github.event.inputs.break_minutes }} minutes"
           
-          python process_questions.py
+          # Run with -u flag for unbuffered output to see all logs in real-time
+          python -u process_questions.py
       
       - name: Prepare Artifacts
         if: success()
         run: |
           echo "📦 Preparing artifacts..."
+          echo "   Current directory: $(pwd)"
+          if [ ! -d "output_data" ]; then
+            echo "⚠️ No 'output_data' directory found. Nothing to zip."
+            exit 0
+          fi
           cd output_data
+          echo "   Inside 'output_data' directory. Contents:"
+          ls -l
+          echo "   Zipping subfolders..."
           for folder in */; do
             if [ -d "$folder" ]; then
               folder_name="${folder%/}"
-              echo "Zipping: $folder_name"
+              echo "   - Zipping: $folder_name"
               zip -r "${folder_name}.zip" "$folder_name"
             fi
           done
+          echo "✅ Zipping complete. Final zip files:"
           ls -lh *.zip
       
       - name: Upload Output Artifacts
@@ -89,11 +121,17 @@ jobs:
       - name: Generate Summary Report
         if: success()
         run: |
+          echo "Generating summary report..."
           echo "# 📊 Processing Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "## ✅ Successfully Processed Folders" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           
+          if [ ! -d "output_data" ]; then
+            echo "No 'output_data' directory found to summarize." >> $GITHUB_STEP_SUMMARY
+            exit 0
+          fi
+
           for folder in output_data/*/; do
             if [ -d "$folder" ] && [ -f "${folder}full.json" ]; then
               folder_name=$(basename "$folder")
@@ -109,10 +147,14 @@ jobs:
           
           echo "## 📥 Download Artifacts" >> $GITHUB_STEP_SUMMARY
           echo "Artifacts are available in the **Actions** tab under this workflow run." >> $GITHUB_STEP_SUMMARY
+          echo "✅ Summary report generated."
       
       - name: Cleanup on Failure
         if: failure()
         run: |
           echo "❌ Workflow failed. Check logs for details."
-          echo "Current state saved in output_data folder."
-          ls -R output_data/ || echo "No output data found"
+          echo "--- Current Directory State ---"
+          pwd
+          ls -l
+          echo "--- Output Data State (if exists) ---"
+          ls -R output_data/ || echo "No output_data found on failure."

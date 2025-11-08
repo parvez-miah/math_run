@@ -1,20 +1,34 @@
 {
   "folders": [
     {
-      "name": "chapter 01 Matrix and Determinants",
+      "name": "Math 1st paper Chapter 09 Differentiation",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
-        "subject": "Higher Mathematics 2nd Paper",
+        "subject": "Higher Mathematics 1st Paper",
         "question_type": "MCQ",
-        "chapter_en": "Matrix and Determinants",
-        "chapter_bn": "ম্যাট্রিক্স ও নির্ণায়ক",
-        "chapter_number_en": "01",
-        "chapter_number_bn": "০১",
+        "chapter_en": "Differentiation",
+        "chapter_bn": "অন্তরীকরণ",
+        "chapter_number_en": "09",
+        "chapter_number_bn": "০৯",
+        "question_for_en": "HSC and Admission Test",
+        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
+      }
+    },
+    {
+      "name": "math-1-chapter-3",
+      "context": {
+        "grades": [11, 12],
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 1st Paper",
+        "question_type": "MCQ",
+        "chapter_en": "Straight Line",
+        "chapter_bn": "সরলরেখা",
+        "chapter_number_en": "03",
+        "chapter_number_bn": "০৩",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }
     }
-   
   ]
 }

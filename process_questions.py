@@ -24,8 +24,8 @@ print(f"✅ Loaded {len(API_KEYS)} API keys from environment")
 
 BASE_IMAGES_FOLDER = "Images"
 OUTPUT_BASE_FOLDER = "output_data"
-MAX_WORKERS = 5 
-MAX_INNER_WORKERS = 3
+MAX_WORKERS = 7 
+MAX_INNER_WORKERS = 4
 
 # Load folder contexts from JSON file
 CONTEXTS_FILE = "folder_contexts.json"

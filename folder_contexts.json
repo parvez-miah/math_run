@@ -1,31 +1,61 @@
 {
   "folders": [
     {
-      "name": "Math 1st paper Chapter 09 Differentiation",
+      "name": "Math 1st Paper Chapter 02 Vector",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 1st Paper",
         "question_type": "MCQ",
-        "chapter_en": "Differentiation",
-        "chapter_bn": "অন্তরীকরণ",
-        "chapter_number_en": "09",
-        "chapter_number_bn": "০৯",
+        "chapter_en": "Vector",
+        "chapter_bn": "ভেক্টর",
+        "chapter_number_en": "02",
+        "chapter_number_bn": "০২",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }
     },
     {
-      "name": "math-1-chapter-3",
+      "name": "Math 1st Paper Chapter 04 The Circle",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 1st Paper",
         "question_type": "MCQ",
-        "chapter_en": "Straight Line",
-        "chapter_bn": "সরলরেখা",
-        "chapter_number_en": "03",
-        "chapter_number_bn": "০৩",
+        "chapter_en": "The Circle",
+        "chapter_bn": "বৃত্ত",
+        "chapter_number_en": "04",
+        "chapter_number_bn": "০৪",
+        "question_for_en": "HSC and Admission Test",
+        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
+      }
+    },
+    {
+      "name": "Math 1st Paper Chapter 05 Permutation and Combination",
+      "context": {
+        "grades": [11, 12],
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 1st Paper",
+        "question_type": "MCQ",
+        "chapter_en": "Permutation and Combination",
+        "chapter_bn": "বিন্যাস ও সমাবেশ",
+        "chapter_number_en": "05",
+        "chapter_number_bn": "০৫",
+        "question_for_en": "HSC and Admission Test",
+        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
+      }
+    },
+    {
+      "name": "Math 1st Paper Chapter 10 Integration",
+      "context": {
+        "grades": [11, 12],
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 1st Paper",
+        "question_type": "MCQ",
+        "chapter_en": "Integration",
+        "chapter_bn": "যোগজীকরণ",
+        "chapter_number_en": "10",
+        "chapter_number_bn": "১০",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }

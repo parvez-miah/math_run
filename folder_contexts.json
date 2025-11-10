@@ -1,61 +1,61 @@
 {
   "folders": [
     {
-      "name": "Math 1st Paper Chapter 02 Vector",
+      "name": "Math 1st Paper 06 Trangametric Ratios",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 1st Paper",
         "question_type": "MCQ",
-        "chapter_en": "Vector",
-        "chapter_bn": "ভেক্টর",
-        "chapter_number_en": "02",
-        "chapter_number_bn": "০২",
+        "chapter_en": "Trigonometric Ratios",
+        "chapter_bn": "ত্রিকোণমিতিক অনুপাত",
+        "chapter_number_en": "06",
+        "chapter_number_bn": "০৬",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }
     },
     {
-      "name": "Math 1st Paper Chapter 04 The Circle",
+      "name": "Math 1st Paper 07 Triangle matric Ratio of Associate Angles",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 1st Paper",
         "question_type": "MCQ",
-        "chapter_en": "The Circle",
-        "chapter_bn": "বৃত্ত",
+        "chapter_en": "Trigonometric Ratio of Associate Angles",
+        "chapter_bn": "সংযুক্ত কোণের ত্রিকোণমিতিক অনুপাত",
+        "chapter_number_en": "07",
+        "chapter_number_bn": "০৭",
+        "question_for_en": "HSC and Admission Test",
+        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
+      }
+    },
+    {
+      "name": "Math 1st Paper 08 Functions and Graph of Functions",
+      "context": {
+        "grades": [11, 12],
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 1st Paper",
+        "question_type": "MCQ",
+        "chapter_en": "Functions and Graph of Functions",
+        "chapter_bn": "ফাংশন ও ফাংশনের লেখচিত্র",
+        "chapter_number_en": "08",
+        "chapter_number_bn": "০৮",
+        "question_for_en": "HSC and Admission Test",
+        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
+      }
+    },
+    {
+      "name": "Math 2nd Paper 04 Polynomials and Polynomial Equation",
+      "context": {
+        "grades": [11, 12],
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 2nd Paper",
+        "question_type": "MCQ",
+        "chapter_en": "Polynomials and Polynomial Equation",
+        "chapter_bn": "বহুপদী এবং বহুপদী সমীকরণ",
         "chapter_number_en": "04",
         "chapter_number_bn": "০৪",
-        "question_for_en": "HSC and Admission Test",
-        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
-      }
-    },
-    {
-      "name": "Math 1st Paper Chapter 05 Permutation and Combination",
-      "context": {
-        "grades": [11, 12],
-        "exam_types": ["Medical Admission", "HSC", "Versity"],
-        "subject": "Higher Mathematics 1st Paper",
-        "question_type": "MCQ",
-        "chapter_en": "Permutation and Combination",
-        "chapter_bn": "বিন্যাস ও সমাবেশ",
-        "chapter_number_en": "05",
-        "chapter_number_bn": "০৫",
-        "question_for_en": "HSC and Admission Test",
-        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
-      }
-    },
-    {
-      "name": "Math 1st Paper Chapter 10 Integration",
-      "context": {
-        "grades": [11, 12],
-        "exam_types": ["Medical Admission", "HSC", "Versity"],
-        "subject": "Higher Mathematics 1st Paper",
-        "question_type": "MCQ",
-        "chapter_en": "Integration",
-        "chapter_bn": "যোগজীকরণ",
-        "chapter_number_en": "10",
-        "chapter_number_bn": "১০",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }

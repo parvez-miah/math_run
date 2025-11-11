@@ -1,14 +1,29 @@
 {
   "folders": [
     {
-      "name": "Math 1st Paper 06 Trangametric Ratios",
+      "name": "Math 2nd Paper 01 Real Numbers and Inequalities",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
-        "subject": "Higher Mathematics 1st Paper",
+        "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
-        "chapter_en": "Trigonometric Ratios",
-        "chapter_bn": "ত্রিকোণমিতিক অনুপাত",
+        "chapter_en": "Real Numbers and Inequalities",
+        "chapter_bn": "বাস্তব সংখ্যা এবং অসমতা",
+        "chapter_number_en": "01",
+        "chapter_number_bn": "০১",
+        "question_for_en": "HSC and Admission Test",
+        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
+      }
+    },
+    {
+      "name": "Math 2nd Paper 06 Conics",
+      "context": {
+        "grades": [11, 12],
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 2nd Paper",
+        "question_type": "MCQ",
+        "chapter_en": "Conics",
+        "chapter_bn": "কনিক",
         "chapter_number_en": "06",
         "chapter_number_bn": "০৬",
         "question_for_en": "HSC and Admission Test",
@@ -16,14 +31,14 @@
       }
     },
     {
-      "name": "Math 1st Paper 07 Triangle matric Ratio of Associate Angles",
+      "name": "Math 2nd Paper 07 Inverse Trigonometric Functions and Trigonometric Equations",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
-        "subject": "Higher Mathematics 1st Paper",
+        "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
-        "chapter_en": "Trigonometric Ratio of Associate Angles",
-        "chapter_bn": "সংযুক্ত কোণের ত্রিকোণমিতিক অনুপাত",
+        "chapter_en": "Inverse Trigonometric Functions and Trigonometric Equations",
+        "chapter_bn": "বিপরীত ত্রিকোণমিতিক ফাংশন ও ত্রিকোণমিতিক সমীকরণ",
         "chapter_number_en": "07",
         "chapter_number_bn": "০৭",
         "question_for_en": "HSC and Admission Test",
@@ -31,31 +46,16 @@
       }
     },
     {
-      "name": "Math 1st Paper 08 Functions and Graph of Functions",
-      "context": {
-        "grades": [11, 12],
-        "exam_types": ["Medical Admission", "HSC", "Versity"],
-        "subject": "Higher Mathematics 1st Paper",
-        "question_type": "MCQ",
-        "chapter_en": "Functions and Graph of Functions",
-        "chapter_bn": "ফাংশন ও ফাংশনের লেখচিত্র",
-        "chapter_number_en": "08",
-        "chapter_number_bn": "০৮",
-        "question_for_en": "HSC and Admission Test",
-        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
-      }
-    },
-    {
-      "name": "Math 2nd Paper 04 Polynomials and Polynomial Equation",
+      "name": "Math 2nd Paper 08 Statics",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
-        "chapter_en": "Polynomials and Polynomial Equation",
-        "chapter_bn": "বহুপদী এবং বহুপদী সমীকরণ",
-        "chapter_number_en": "04",
-        "chapter_number_bn": "০৪",
+        "chapter_en": "Statics",
+        "chapter_bn": "স্থিতিবিদ্যা",
+        "chapter_number_en": "08",
+        "chapter_number_bn": "০৮",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }

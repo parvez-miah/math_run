@@ -1,61 +1,76 @@
 {
   "folders": [
     {
-      "name": "Math 2nd Paper 01 Real Numbers and Inequalities",
+      "name": "Math 2nd Paper 02 Linear Programming",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
-        "chapter_en": "Real Numbers and Inequalities",
-        "chapter_bn": "বাস্তব সংখ্যা এবং অসমতা",
-        "chapter_number_en": "01",
-        "chapter_number_bn": "০১",
+        "chapter_en": "Linear Programming",
+        "chapter_bn": "যোগাশ্রয়ী প্রোগ্রামিং",
+        "chapter_number_en": "02",
+        "chapter_number_bn": "০২",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }
     },
     {
-      "name": "Math 2nd Paper 06 Conics",
+      "name": "Math 2nd Paper 03 Complex Number",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
-        "chapter_en": "Conics",
-        "chapter_bn": "কনিক",
-        "chapter_number_en": "06",
-        "chapter_number_bn": "০৬",
+        "chapter_en": "Complex Number",
+        "chapter_bn": "জটিল সংখ্যা",
+        "chapter_number_en": "03",
+        "chapter_number_bn": "০৩",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }
     },
     {
-      "name": "Math 2nd Paper 07 Inverse Trigonometric Functions and Trigonometric Equations",
+      "name": "Math 2nd Paper 05 Binomial Expansions",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
-        "chapter_en": "Inverse Trigonometric Functions and Trigonometric Equations",
-        "chapter_bn": "বিপরীত ত্রিকোণমিতিক ফাংশন ও ত্রিকোণমিতিক সমীকরণ",
-        "chapter_number_en": "07",
-        "chapter_number_bn": "০৭",
+        "chapter_en": "Binomial Expansions",
+        "chapter_bn": "দ্বিপদী বিস্তৃতি",
+        "chapter_number_en": "05",
+        "chapter_number_bn": "০৫",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }
     },
     {
-      "name": "Math 2nd Paper 08 Statics",
+      "name": "Math 2nd Paper 09 Motion of Particles in a Plane",
       "context": {
         "grades": [11, 12],
         "exam_types": ["Medical Admission", "HSC", "Versity"],
         "subject": "Higher Mathematics 2nd Paper",
         "question_type": "MCQ",
-        "chapter_en": "Statics",
-        "chapter_bn": "স্থিতিবিদ্যা",
-        "chapter_number_en": "08",
-        "chapter_number_bn": "০৮",
+        "chapter_en": "Motion of Particles in a Plane",
+        "chapter_bn": "সমতলে বস্তুকণার গতি",
+        "chapter_number_en": "09",
+        "chapter_number_bn": "০৯",
+        "question_for_en": "HSC and Admission Test",
+        "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
+      }
+    },
+    {
+      "name": "Math 2nd Paper 10 Measure of Dispersion and Probability",
+      "context": {
+        "grades": [11, 12],
+        "exam_types": ["Medical Admission", "HSC", "Versity"],
+        "subject": "Higher Mathematics 2nd Paper",
+        "question_type": "MCQ",
+        "chapter_en": "Measure of Dispersion and Probability",
+        "chapter_bn": "বিস্তার পরিমাপ ও সম্ভাবনা",
+        "chapter_number_en": "10",
+        "chapter_number_bn": "১০",
         "question_for_en": "HSC and Admission Test",
         "question_for_bn": "এইচএসসি এবং ভর্তি পরীক্ষা"
       }
